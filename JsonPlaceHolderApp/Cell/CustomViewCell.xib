@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="144" id="KGk-i7-Jjw" customClass="CustomViewCell" customModule="JsonPlaceHolderApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="293" height="144"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="293" height="144"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VMi-IT-EQ1">
+                        <rect key="frame" x="20" y="45" width="60" height="60"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="Njp-JW-9U2"/>
+                            <constraint firstAttribute="height" constant="60" id="pZh-qU-U2n"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOt-Lc-eMm">
+                        <rect key="frame" x="90" y="45" width="183" height="26"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZC-S8-39h">
+                        <rect key="frame" x="90" y="76" width="183" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VMi-IT-EQ1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5tW-6b-iWn"/>
+                    <constraint firstItem="VOt-Lc-eMm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="45" id="9A6-lp-3xM"/>
+                    <constraint firstItem="VOt-Lc-eMm" firstAttribute="leading" secondItem="VMi-IT-EQ1" secondAttribute="trailing" constant="10" id="9lP-pX-MfP"/>
+                    <constraint firstAttribute="bottom" secondItem="VMi-IT-EQ1" secondAttribute="bottom" constant="45" id="BVj-NL-OWE"/>
+                    <constraint firstItem="dZC-S8-39h" firstAttribute="leading" secondItem="VMi-IT-EQ1" secondAttribute="trailing" constant="10" id="HPK-Y6-dZr"/>
+                    <constraint firstAttribute="trailing" secondItem="dZC-S8-39h" secondAttribute="trailing" constant="20" id="WKq-9I-roK"/>
+                    <constraint firstAttribute="trailing" secondItem="VOt-Lc-eMm" secondAttribute="trailing" constant="20" id="bFn-xG-wOi"/>
+                    <constraint firstItem="VMi-IT-EQ1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="45" id="goN-LY-hGt"/>
+                    <constraint firstItem="dZC-S8-39h" firstAttribute="top" secondItem="VOt-Lc-eMm" secondAttribute="bottom" constant="5" id="lfx-cT-GHQ"/>
+                    <constraint firstItem="VMi-IT-EQ1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="rTL-HD-fxV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="customView" destination="VMi-IT-EQ1" id="6Rq-dH-jbl"/>
+                <outlet property="subtitleLabel" destination="dZC-S8-39h" id="dtb-Bi-5na"/>
+                <outlet property="titleLabel" destination="VOt-Lc-eMm" id="aUy-Ex-Vyo"/>
+            </connections>
+            <point key="canvasLocation" x="116.66666666666667" y="86.383928571428569"/>
+        </tableViewCell>
+    </objects>
+</document>
