@@ -32,11 +32,28 @@
                     <navigationItem key="navigationItem" title="Items" id="AfZ-b6-lA3"/>
                     <connections>
                         <outlet property="tableView" destination="TXm-An-MhK" id="2r2-z0-VoK"/>
+                        <segue destination="eX4-Bq-2sy" kind="show" identifier="send-detail" id="PUS-MK-Pvt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="6k2-yS-NOj">
+            <objects>
+                <viewController id="eX4-Bq-2sy" customClass="DetailViewController" customModule="JsonPlaceHolderApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nL0-RJ-Kqa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="DYe-Wp-jQL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="i9N-Xb-0WT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S33-NO-Nrp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2107" y="132"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iQw-k3-fJG">
