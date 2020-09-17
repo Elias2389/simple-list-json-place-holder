@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     let urlApiString: String = "https://jsonplaceholder.typicode.com/users"
     var model: [User] = []
+    var selectedUser: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,15 +50,7 @@ class ViewController: UIViewController {
             self.tableView.reloadData()
             
         }
-        
-        AF.request(endpoint)
-            .responseJSON { (data) in
-          print(data)
-        }
-        
     }
-
-
 }
 
 
@@ -81,7 +74,19 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("La celda es: \(indexPath.row)")
+        self.performSegue(withIdentifier: "send-detail", sender: self)
+    }
+    
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        self.selectedUser = self.model[indexPath.row]
+        return indexPath
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "send-detail" {
+            let destine = segue.destination as! DetailViewController
+            destine.setUser(user: self.selectedUser!)
+        }
     }
 }
 
